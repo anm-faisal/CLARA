@@ -1,5 +1,5 @@
 terraform {
-  reqprovider "libvirt" {
+  provider "libvirt" {
   libvirt = {
 	spurce = "dmacvicar/libvirt"
 	version ="0.6.14"
