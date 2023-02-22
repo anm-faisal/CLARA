@@ -41,6 +41,10 @@ data "template_file" "user_data" {
 
 data "template_file" "network_config" {
   template = file("${path.module}/network_config.cfg")
+  vars = {
+    hostname = var.hostname
+    fqdn = "${var.hostname}.${var.domain}"
+
 }
 # Create the machine
 resource "libvirt_domain" "domain-ubuntu" {
