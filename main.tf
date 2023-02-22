@@ -7,8 +7,8 @@ terraform {
     }	
 }	
 provider "libvirt" {
-  uri = "driver+ssh://faisalan@clarauq01p.sth.health.qld.gov.au"
-}
+  uri = "driver+ssh://[username:PASSWORD@][hostname][:port]/[path]?sshauth=ssh-password"
+  uri = "qemu+ssh://rhel@rhel01/system?keyfile=/tmp/id_rsa_fc"
 resource "libvirt_volume" "base_os_image" {
   name = "${var.hostname}-base_os_image"
   pool = var.pool
