@@ -1,4 +1,4 @@
-variable "hotname" {
+variable "hostname" {
 	type = string
 	description = "hostname"
 }
