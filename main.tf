@@ -7,7 +7,7 @@ terraform {
     }	
 }	
 provider "libvirt" {
-  uri = "driver+ssh://faisalan@clara/system?keyfile=/tmp/id_rsa.pub"
+  uri = "driver+ssh://faisalan@clara/system?keyfile=/.ssh/id_rsa.pub"
 resource "libvirt_volume" "base_os_image" {
   name = "${var.hostname}-base_os_image"
   pool = var.pool
