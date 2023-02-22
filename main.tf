@@ -44,7 +44,7 @@ data "template_file" "network_config" {
   vars = {
     hostname = var.hostname
     fqdn = "${var.hostname}.${var.domain}"
-
+  }
 }
 # Create the machine
 resource "libvirt_domain" "domain-ubuntu" {
