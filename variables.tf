@@ -4,7 +4,7 @@ variable "hostname" {
 }
 variable "domain" {
     type = string
-    description = "domain"
+    description = ".sth.health.qld.gov.au"
 }
 variable "ip_type" {
     type = string
