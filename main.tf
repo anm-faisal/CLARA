@@ -58,7 +58,7 @@ resource "libvirt_domain" "domain-ubuntu" {
        volume_id = libvirt_volume.os_image.id
   }
   network_interface {
-       network_name = "default"
+       network_name = "host-bridge"
   }
 
   cloudinit = libvirt_cloudinit_disk.commoninit.id
