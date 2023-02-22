@@ -23,7 +23,7 @@ variable "cpu" {
 }
 variable "prefixIP" {
     type = string
-    default = "192.168.122"
+    default = "10.240.90.221"
     description = "VM IP prefix"
 }
 variable "octetIP" {
