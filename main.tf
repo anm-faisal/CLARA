@@ -9,9 +9,6 @@ terraform {
 provider "libvirt" {
   uri = "driver+ssh://faisalan@clarauq01p.sth.health.qld.gov.au"
 }
-provider "libvirt" {
-  uri = "qemu:///session"
-}
 resource "libvirt_volume" "base_os_image" {
   name = "${var.hostname}-base_os_image"
   pool = var.pool
