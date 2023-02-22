@@ -7,8 +7,8 @@ terraform {
     }	
 }	
 provider "libvirt" {
-  uri = "driver+ssh://faisalan@clara/system?keyfile=/.ssh/id_rsa.pub"
-resource "libvirt_volume" "base_os_image" {
+  uri = "qemu+ssh://faisalan@clara/system?keyfile=/.ssh/id_rsa.pub"
+  resource "libvirt_volume" "base_os_image" {
   name = "${var.hostname}-base_os_image"
   pool = var.pool
   # using newest ubuntu focal 20.04
