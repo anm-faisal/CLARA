@@ -1,10 +1,10 @@
 terraform {
-  provider "libvirt" {
-  libvirt = {
-	spurce = "dmacvicar/libvirt"
-	version ="0.6.14"
-	}
-    }	
+  required_providers {
+    libvirt = {
+      source  = "dmacvicar/libvirt"
+      version = "0.6.14"
+    }
+  }
 }	
 provider "libvirt" {
   uri = "qemu+ssh://faisalan@clara/system?keyfile=/.ssh/id_rsa.pub"
