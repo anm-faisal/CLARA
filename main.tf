@@ -42,7 +42,7 @@ data "template_file" "user_data" {
 data "template_file" "network_config" {
   template = file("${path.module}/network_config_${var.ip_type}.cfg")
   vars = {
-    domain = var.libvirt_domain
+    domain = var.domain
     prefixIP = var.prefixIP
     octetIP = var.octetIP
   }
