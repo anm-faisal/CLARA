@@ -7,7 +7,7 @@ terraform {
   }
 }	
 provider "libvirt" {
-  uri = "qemu+ssh://faisalan@clara/system?keyfile=/home/faisalan/.ssh/id_rsa.pub"
+  uri = "qemu+ssh://faisalan@10.240.90.221/system/system?keyfile=/home/faisalan/.ssh/id_rsa.pub"
 }
   resource "libvirt_volume" "base_os_image" {
   name = "${var.hostname}-base_os_image"
@@ -59,7 +59,7 @@ resource "libvirt_domain" "domain-ubuntu" {
   }
   network_interface {
        network_name = "host-bridge"
-  }
+ }
 
   cloudinit = libvirt_cloudinit_disk.commoninit.id
 
@@ -77,3 +77,4 @@ resource "libvirt_domain" "domain-ubuntu" {
   }
 }
 
+     
