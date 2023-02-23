@@ -7,7 +7,7 @@ terraform {
   }
 }	
 provider "libvirt" {
-  uri = "qemu+ssh://faisalan@clara/system?keyfile=/home/faisalan/.ssh/id_rsa.pub"
+  uri = "qemu+ssh://faisalan@clarauq03p.sth.health.qld.gov.au/system?keyfile=/home/faisalan/.ssh/id_rsa.pub"
 }
   resource "libvirt_volume" "base_os_image" {
   name = "${var.hostname}-base_os_image"
@@ -42,7 +42,7 @@ data "template_file" "user_data" {
 data "template_file" "network_config" {
   template = file("${path.module}/network_config_${var.ip_type}.cfg")
   vars = {
-    domain = var.domain
+    domain = var.domai
     prefixIP = var.prefixIP
     octetIP = var.octetIP
   }
