@@ -2,13 +2,15 @@ terraform {
   required_providers {
     libvirt = {
       source  = "dmacvicar/libvirt"
-      version = "0.6.14"
+      version = "0.7.1"
     }
   }
 }	
+
 provider "libvirt" {
     uri = "qemu+ssh://faisalan@clarauq03p.sth.health.qld.gov.au/system?keyfile=/home/faisalan/.ssh/id_rsa.pub"
 }
+
   resource "libvirt_volume" "base_os_image" {
   name = "${var.hostname}-base_os_image"
   pool = var.pool
@@ -18,6 +20,7 @@ provider "libvirt" {
   format = "qcow2"
   
 }
+/*
 resource "libvirt_volume" "os_image" {
   name =  "${var.hostname}-os_image"
   pool = var.pool
@@ -76,5 +79,6 @@ resource "libvirt_domain" "domain-ubuntu" {
     listen_type = "address"
   }
 }
+*/
 
      
