@@ -8,7 +8,7 @@ terraform {
 }	
 
 provider "libvirt" {
-    uri = "qemu+ssh://faisalan@clarauq03p.sth.health.qld.gov.au/system?keyfile=/home/faisalan/.ssh/id_rsa.pub"
+    uri = "qemu+ssh://faisalan@clarauq03p.sth.health.qld.gov.au/system?keyfile=/home/faisalan/.ssh/id_rsa"
 }
 
   resource "libvirt_volume" "base_os_image" {
@@ -20,6 +20,7 @@ provider "libvirt" {
   format = "qcow2"
   
 }
+
 /*
 resource "libvirt_volume" "os_image" {
   name =  "${var.hostname}-os_image"
