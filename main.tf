@@ -19,11 +19,11 @@ provider "libvirt" {
   
 }
 resource "libvirt_volume" "os_image" {
-  name =  "${var.hostname}-os_image"
-  pool  = var.pool
-  format = "qcow2"
-  size = 53687091200
-  base_volume_id = libvirt_volume.base_os_image.id
+  name            =  "${var.hostname}-os_image"
+  pool            = var.pool
+  format          = "qcow2"
+  size            = 53687091200
+  base_volume_id  = libvirt_volume.base_os_image.id
 }
 resource "libvirt_cloudinit_disk" "commoninit" {
           name = "${var.hostname}-commoninit.iso"
