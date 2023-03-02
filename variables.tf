@@ -1,10 +1,10 @@
 variable "hostname" {
-	type = string
-	description = "hostname"
+    type = string
+    description = "hostname"
 }
 variable "domain" {
     type = string
-    description = ".sth.health.qld.gov.au"
+    description = "domain"
 }
 variable "ip_type" {
     type = string
@@ -36,4 +36,3 @@ variable "pool" {
     default = "default"
     description = "Storage pool"
 }
-

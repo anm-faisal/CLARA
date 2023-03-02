@@ -1,3 +1,0 @@
-# CLARA
-
-CLARA

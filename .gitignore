@@ -1,5 +1,6 @@
-form.lock.hcl
+.terraform.lock.hcl
 .terraform
 terraform.tfstate
 terraform.tfstate.backup
 *.plan
+ubuntu.service

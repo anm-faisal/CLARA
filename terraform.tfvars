@@ -1,5 +1,5 @@
 hostname = "clara"
 cpu=6
 memoryMB=24576
-domain = ".sth.health.qld.gov.au" 
-pool="default"
+domain = "example.com" 
+pool="k8s"
